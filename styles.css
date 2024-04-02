@@ -10,14 +10,19 @@ body{
 }
 
 nav{
-    -webkit-box-shadow: 0px 3px 25px -7px #000000; 
-box-shadow: 0px 3px 25px -7px #000000;
-    z-index: 100;
+    
+    z-index: 999;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
 
+.navSombra{
+    -webkit-box-shadow: 0px 3px 25px -14px #000000; 
+    box-shadow: 0px 3px 25px -14px #000000;
 }
 
 nav a{
@@ -54,6 +59,28 @@ nav strong{
     width: max-content;
 }
 
+.buttonFour{
+    background-color: #8d8d8d;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 8px 65px;
+    width: max-content;
+}
+
+.buttonFive{
+    background-color: #F2C335;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 8px 65px;
+    width: max-content;
+}
+
 .containerApp{
     padding-left: 5%;
     padding-right: 5%;
@@ -70,6 +97,17 @@ nav strong{
     padding-bottom: 100px;
 }
 
+.containerBgThree{
+    background-image: url("./img/bg3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
 .containerPreguntas{
     background-image: url("./img/bg2.jpg");
     background-size: cover;
@@ -80,17 +118,7 @@ nav strong{
     padding-bottom: 100px;
 }
 
-.bgContainer h1{
-    font-size: 60px;
-    font-weight: 600;
-    width: 90%;
-}
 
-.bgContainer p{
-    font-size: 28px;
-    font-weight: 400;
-    width: 60%;
-}
 
 .accordion-button{
     background-color: #2C2C2C!important;
@@ -100,6 +128,7 @@ nav strong{
 
 .accordion-item{
     border: none!important;
+    background-color: #2C2C2C!important;
 }
 
 .accordion-button::after{
@@ -120,4 +149,301 @@ nav strong{
 
 .activeMenu{
     transform: translateX(0vh)!important;
+}
+
+.navSecundario{
+    z-index: 998;
+
+}
+
+.navSecundario a{
+    text-decoration: none;
+    color: #707070;
+}
+
+.precioUno{
+    width: 22%;
+    padding: 3rem;
+}
+
+.precioDos{
+    width: 22%;
+    padding: 3rem;
+}
+
+.precioTres{
+    width: 22%;
+    padding: 3rem;
+}
+
+.precioCuatro{
+    width: 22%;
+    padding: 3rem;
+}
+
+@media screen and (max-width: 1362px){
+    .seccionImgDescripcion img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .seccionImgDescripcion{
+        flex-wrap: wrap;
+    }
+    .seccionImgDescripcion img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1255px){
+    .containerPrecios{
+        gap: 20px;
+    }
+    .precioUno{
+        width: 40%;
+    }
+    .precioDos{
+        width: 40%;
+    }
+    
+    .precioTres{
+        width: 40%;
+    }
+    
+    .precioCuatro{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 747px){
+    .precioUno{
+        width: 47%;
+    }
+    .precioDos{
+        width: 47%;
+    }
+    
+    .precioTres{
+        width: 47%;
+    }
+    
+    .precioCuatro{
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 610px){
+    .containerPrecios .buttonFour{
+        padding: 10px 0px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .containerPrecios .buttonFive{
+        padding: 10px 0px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .containerPrecios h3{
+        font-size: 20px!important;
+    }
+    .precioUno{
+        padding: 1rem;
+    }
+    .precioDos{
+        padding: 1rem;
+    }
+    
+    .precioTres{
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-top: 2rem;
+    }
+    .precioCuatro{
+        padding: 1rem;
+    }
+    .containerBgThree h1{
+        font-size: 30px!important;
+    }
+}
+
+@media screen and (max-width: 441px){
+    .precioUno{
+        width: 100%;
+    }
+    .precioDos{
+        width: 100%;
+    }
+    
+    .precioTres{
+        width: 100%;
+    }
+    
+    .precioCuatro{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1044px){
+    .bgContainer img{
+        display: none!important;
+    }
+}  
+
+@media screen and (min-width: 995px){
+    .ocultDesktop{
+        display: none!important;
+    }
+}
+
+.itemsCaracteristicas{
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 995px){
+    .ocultMobile{
+        display: none!important;
+    }
+    .menuSecundario{
+        height: 70vh!important;
+    }
+    .seccionImgDescripcion img{
+        width: 100%!important;
+    }
+    .seccionImgDescripcion p{
+        width: 100%!important;
+        font-size: 20px!important;
+    }
+    .seccionImgDescripcion h3{
+        font-size: 40px!important;
+    }
+    .voltear{
+        flex-direction: column-reverse!important;
+    }
+    .containerCaracteristicas h2{
+        font-size: 40px!important;
+    }
+    .itemsCaracteristicas{
+        justify-content: center;
+        gap: 30px;
+    }
+    .itemsCaracteristicas strong{
+        font-size: 24px!important;
+    }
+    .navSecundario{
+        padding-bottom: 80px;
+    }
+}
+.containerItemsSoluciones{
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 788px){
+    .containerItemsSoluciones{
+        justify-content: center!important;
+    }
+}
+
+@media screen and (max-width: 690px){
+    .footerOne{
+        flex-direction: column;
+        gap: 20px;
+    
+    }
+    .footerOne img{
+        width: 100%!important;
+    }
+    .footerOne a{
+        font-size: 15px!important;
+    }
+    .footerTwo strong{
+        font-size: 15px!important;
+    }
+    .menuFooter a{
+        text-align: center;
+    }
+    .menuFooter{
+        flex-direction: column!important;
+    }
+    .menuFooter strong{
+        display: none!important;
+    }
+    .preguntas{
+        width: 90%!important;
+    }
+    .accordion-button{
+        font-size: 20px!important;
+    }
+    .bgContainer h1{
+        font-size: 40px!important;
+        width: 100%!important;
+    }
+    .bgContainer p{
+        width: 100%!important;
+    }
+    .containerNuestrasSoluciones h2{
+        font-size: 40px!important;
+    }
+    .containerNuestrasSoluciones strong{
+        font-size: 23px!important;
+    }
+    .containerPreguntas h3{
+        font-size: 25px!important;
+    }
+    .containerPreguntas button{
+        padding: 10px 0px!important;
+        width: 100%!important;
+    }
+}
+
+
+
+@media screen and (max-width: 356px){
+    .containerNuestrasSoluciones h2{
+        font-size: 30px!important;
+    }
+    nav{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .bgContainer button{
+        padding: 10px 0px;
+        width: 100%;
+    }
+    .containerCaracteristicas h2 {
+        font-size: 30px !important;
+    }
+    .itemsCaracteristicas strong {
+        font-size: 17px !important;
+    }
+    .seccionImgDescripcion h3 {
+        font-size: 30px !important;
+    }
+    .seccionImgDescripcion p {
+        width: 100% !important;
+        font-size: 15px !important;
+    }
+    .bgContainer h1 {
+        font-size: 30px !important;
+        width: 100% !important;
+    }
+    .bgContainer p {
+        font-size: 18px!important;
+    }
+    .containerItemsSoluciones img{
+        width: 100%;
+    }
+    .containerItemsSoluciones h3{
+        font-size: 20px!important;
+    }
+    nav img{
+        width: 80%!important;
+    }
+    .bgContainer {
+        margin-top: 40px;
+    }
+    .containerBgThree {
+        margin-top: 20px;
+    }
 }
